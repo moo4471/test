@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hitnasrallah</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="score">SCORE: <span>00</span></h1>
+        <h1 class="timer">TIME: <span>30</span></h1>
+
+        <div class="controls">
+            <button class="start-btn">START GAME</button>
+            <select class="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+                <option value="extreme">Extreme</option>
+            </select>
+        </div>
+
+        <div class="board">
+            <div class="hole"></div>
+            <div class="hole"></div>
+            <div class="hole"></div>
+            <div class="hole"></div>
+            <div class="hole"></div>
+            <div class="hole"></div>
+            <div class="hole"></div>
+            <div class="hole"></div>
+            <div class="hole"></div>
+        </div>
+
+        <div class="cursor"></div>
+
+
+        <div class="game-over hidden">
+            <h2>GAME OVER!</h2>
+            <p>Final Score: <span id="final-score">00</span></p>
+            <input type="text" id="player-name" placeholder="Enter your name">
+            <button class="save-score-btn">Save Score</button>
+            <button class="view-high-scores-btn">View High Scores</button>
+        </div>
+
+
+        <div class="high-scores hidden">
+            <div class="high-scores-content">
+                <h2>High Scores</h2>
+                <ol id="high-scores-list"></ol>
+                <select id="player-select">
+
+                </select>
+                <p>Selected Player's Score: <span id="selected-score"></span></p>
+                <button class="close-btn">Close</button>
+            </div>
+        </div>
+
+        <audio id="background-music" src="yala.mp3" loop></audio>
+        <audio id="hit-sound" src="hit.mp3"></audio>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
